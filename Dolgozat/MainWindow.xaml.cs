@@ -97,5 +97,18 @@ namespace Dolgozat
             EletkorTextBox.Clear();
             PontszamTextBox.Clear();
         }
+
+        private void Mentes_Click(object sender, RoutedEventArgs e)
+        {
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dolgozatok.txt");
+            var lines = new List<string> { "Név;Életkor;Pontszám" };
+
+            foreach (var adat in Dolgozatok)
+            {
+                lines.Add($"{adat.Nev};{adat.Eletkor};{adat.Pontszam}");
+            }
+
+            File.WriteAllLines(filePath, lines);
+        }
     }
 }

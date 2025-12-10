@@ -58,7 +58,7 @@
             <TextBox x:Name="PontszamTextBox" Grid.Row="0" Grid.Column="7" Height="24"/>
 
             <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Hozzáadás" Width="120" Height="32" Margin="0,12,0,0" Click="Hozzaadas_Click"/>
-            <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Content="Mentés" Width="120" Height="32" Margin="0,12,0,0"/>
+            <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Content="Mentés" Width="120" Height="32" Margin="0,12,0,0" Click="Mentes_Click"/>
         </Grid>
     </Grid>
 </Window>
