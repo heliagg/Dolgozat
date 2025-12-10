@@ -13,7 +13,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0"
+        <DataGrid x:Name="DolgozatDataGrid"
+                  Grid.Row="0"
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   GridLinesVisibility="All"
@@ -21,11 +22,12 @@
                   CanUserDeleteRows="False"
                   CanUserResizeRows="False"
                   RowHeaderWidth="0"
+                  ItemsSource="{Binding Dolgozatok}"
                   Margin="0,0,0,12">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nev" Width="2*"/>
-                <DataGridTextColumn Header="Eletkor" Width="*" />
-                <DataGridTextColumn Header="Pontszam" Width="*" />
+                <DataGridTextColumn Header="Nev" Binding="{Binding Nev}" Width="2*"/>
+                <DataGridTextColumn Header="Eletkor" Binding="{Binding Eletkor}" Width="*" />
+                <DataGridTextColumn Header="Pontszam" Binding="{Binding Pontszam}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
 

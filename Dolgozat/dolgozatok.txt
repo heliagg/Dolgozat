@@ -1,0 +1,9 @@
+Név;Életkor;Pontszám
+Kiss Péter;16;87
+Nagy Anna;17;92
+Szabó Tamás;16;78
+Tóth Éva;18;95
+Varga Bence;17;81
+Horváth Zsolt;16;65
+Molnár Réka;18;89
+Lakatos Dániel;17;72
