@@ -67,5 +67,35 @@ namespace Dolgozat
                 });
             }
         }
+
+        private void Hozzaadas_Click(object sender, RoutedEventArgs e)
+        {
+            var nev = NevTextBox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(nev))
+            {
+                return;
+            }
+
+            if (!int.TryParse(EletkorTextBox.Text, out var eletkor))
+            {
+                return;
+            }
+
+            if (!int.TryParse(PontszamTextBox.Text, out var pontszam))
+            {
+                return;
+            }
+
+            Dolgozatok.Add(new DolgozatAdat
+            {
+                Nev = nev,
+                Eletkor = eletkor,
+                Pontszam = pontszam
+            });
+
+            NevTextBox.Clear();
+            EletkorTextBox.Clear();
+            PontszamTextBox.Clear();
+        }
     }
 }
